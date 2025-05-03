@@ -23,15 +23,14 @@ sealed class Screen(val route: String) {
         fun createRoute(categoryId: Int, restaurantId: Int) = "restaurant/$categoryId/$restaurantId"
     }
 
-//    object RestaurantScreen: Screen("restaurant/{restaurantId}") {
-//    object RestaurantScreen: Screen("restaurant") {
-//        fun createRoute(restaurantId: Restaurant) = "restaurant/$restaurantId"
-//    }
-
     object SearchScreen: Screen("search")
 
     object CartScreen: Screen("cart")
 
+    //    object RestaurantScreen: Screen("restaurant/{restaurantId}") {
+    //    object RestaurantScreen: Screen("restaurant") {
+    //        fun createRoute(restaurantId: Restaurant) = "restaurant/$restaurantId"
+    //    }
 }
 
 @Composable
