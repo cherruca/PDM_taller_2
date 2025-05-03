@@ -29,10 +29,10 @@ data class Category(
 
 
 val mexicanFood = listOf(
-    Dish(1,"Tacos al Pastor","Tacos de cerdo marinado en achiote, cocidos en trompo con piña y cilantro.","https//comedera.com/wp-content/uploads/sites/9/2017/08/tacos-al-pastor-receta.jpg"),
-    Dish(2,"Enchiladas Suizas","Tortillas rellenas de pollo bañadas en salsa verde y gratinadas con queso.","https//example.com/enchiladas-suizas.jpg"),
-    Dish(3,"Mole Poblano","Pollo cubierto con una salsa espesa de chiles, chocolate y especias.","https//example.com/mole-poblano.jpg"),
-    Dish(4,"Chiles en Nogada","Chiles poblanos rellenos de picadillo, cubiertos con salsa de nuez y granada.","https//example.com/chiles-nogada.jpg"),
+    Dish(1,"Tacos al Pastor","Tacos de cerdo marinado en achiote, cocidos en trompo con piña y cilantro.","https://s3.amazonaws.com/static.realcaliforniamilk.com/media/recipes_2/tacos-al-pastor.jpg"),
+    Dish(2,"Enchiladas Suizas","Tortillas rellenas de pollo bañadas en salsa verde y gratinadas con queso.","https://cdn7.kiwilimon.com/recetaimagen/26245/640x640/38984.jpg.jpg"),
+    Dish(3,"Mole Poblano","Pollo cubierto con una salsa espesa de chiles, chocolate y especias.","https://mmmole.com/wp-content/uploads/2019/01/mole-poblano-11-500x500.jpg"),
+    Dish(4,"Chiles en Nogada","Chiles poblanos rellenos de picadillo, cubiertos con salsa de nuez y granada.","https://osojimix.mx/wp-content/uploads/2022/10/CHILES-EN-NOGADA.jpg"),
 
     Dish(21,"Mojito","Cóctel refrescante con ron, menta, lima, azúcar y soda.","https//example.com/mojito.jpg"),
     Dish(22,"Margarita","Tequila, triple sec y jugo de lima con borde de sal.","https//example.com/margarita.jpg"),
