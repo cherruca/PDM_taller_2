@@ -1,5 +1,8 @@
 package com.pmtaller2.c00402523_IvanNolasco.data
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Dish(
     val id: Int,
     val name: String,
@@ -7,6 +10,7 @@ data class Dish(
     val imageUrl: String
 )
 
+@Serializable
 data class Restaurant(
     val id: Int,
     val name: String,
@@ -33,7 +37,7 @@ val mexicanFood = listOf(
     Dish(21,"Mojito","Cóctel refrescante con ron, menta, lima, azúcar y soda.","https//example.com/mojito.jpg"),
     Dish(22,"Margarita","Tequila, triple sec y jugo de lima con borde de sal.","https//example.com/margarita.jpg"),
     Dish(23,"Café Frappé","Café frío batido con hielo y leche, coronado con crema batida.","https//example.com/frappe.jpg"),
-    Dish(24,"Agua de Jamaica","Bebida refrescante hecha con flor de jamaica, endulzada al gusto.","https//cdn7.kiwilimon.com/recetaimagen/31783/640x640/36556.jpg.jpg"),
+    Dish(24,"Agua de Jamaica","Bebida refrescante hecha con flor de jamaica, endulzada al gusto.","https//cdn7.kiwilimon.com/recetaimagen/31783/640x640/36556.jpg"),
 )
 
 val italianFood = listOf(

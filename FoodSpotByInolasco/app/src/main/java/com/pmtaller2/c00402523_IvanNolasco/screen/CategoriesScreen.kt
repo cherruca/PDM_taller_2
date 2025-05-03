@@ -82,8 +82,10 @@ fun CategoriesScreen(navController: NavController, categories: List<Category>) {
                             .fillMaxHeight()
                             .padding(16.dp)
                     ) { items(category.restaurants) { restaurant ->
-                            RestaurantCard(restaurant = restaurant) { restaurantId ->
-//                                navController.navigate(Screen.)
+                            RestaurantCard(restaurant = restaurant, category.id) { restaurantId ->
+//                                val thisRestaurant = Json.encodeToString(restaurantId)
+                                navController.navigate(Screen.RestaurantScreen.createRoute(category.id, restaurant.id))
+
                             }
                         }
 
@@ -103,12 +105,12 @@ fun CategoryList(category: Category) {
 }
 
 @Composable
-fun RestaurantCard(restaurant: Restaurant, onRestaurantClick: (String) -> Unit) {
+fun RestaurantCard(restaurant: Restaurant, category: Int, onRestaurantClick: (Int) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .clickable { onRestaurantClick(Json.encodeToString<Restaurant>(restaurant)) },
+            .clickable { onRestaurantClick(category) },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
@@ -121,8 +123,8 @@ fun RestaurantCard(restaurant: Restaurant, onRestaurantClick: (String) -> Unit) 
         Text(
             text = restaurant.name,
         )
-//        Text(
-//            text = restaurant.description,
-//        )
+        Text(
+            text = category.toString(),
+        )
     }
 }
