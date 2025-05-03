@@ -34,15 +34,16 @@ val mexicanFood = listOf(
     Dish(3,"Mole Poblano","Pollo cubierto con una salsa espesa de chiles, chocolate y especias.","https://mmmole.com/wp-content/uploads/2019/01/mole-poblano-11-500x500.jpg"),
     Dish(4,"Chiles en Nogada","Chiles poblanos rellenos de picadillo, cubiertos con salsa de nuez y granada.","https://osojimix.mx/wp-content/uploads/2022/10/CHILES-EN-NOGADA.jpg"),
 
+    Dish(22,"Margarita","Tequila, triple sec y jugo de lima con borde de sal.","https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/3412D77E-76BE-44B1-8663-3BECCFA1FA79/Derivates/ACB48D20-161F-490E-B4F4-6B502165D823.jpg"),
     Dish(21,"Mojito","Cóctel refrescante con ron, menta, lima, azúcar y soda.","https//example.com/mojito.jpg"),
-    Dish(22,"Margarita","Tequila, triple sec y jugo de lima con borde de sal.","https//example.com/margarita.jpg"),
+
     Dish(23,"Café Frappé","Café frío batido con hielo y leche, coronado con crema batida.","https//example.com/frappe.jpg"),
     Dish(24,"Agua de Jamaica","Bebida refrescante hecha con flor de jamaica, endulzada al gusto.","https//cdn7.kiwilimon.com/recetaimagen/31783/640x640/36556.jpg"),
 )
 
 val italianFood = listOf(
-    Dish(5,"Pizza Margherita","Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.","https//assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg"),
-    Dish(6,"Lasagna","Pasta en capas con carne, queso y salsa boloñesa, horneada al gratén.","https//example.com/lasagna.jpg"),
+    Dish(5,"Pizza Margherita","Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.","https://www.elespectador.com/resizer/v2/D2KL4RRCRJA7RJC5TNULFZEKR4.jpg?auth=a0183c8d1446b9e01eaae717179a0b2d52646e7be97600a983f12574a90d6a6b&width=920&height=613&smart=true&quality=60"),
+    Dish(6,"Lasagna","Pasta en capas con carne, queso y salsa boloñesa, horneada al gratén.","https://www.recetasdesbieta.com/wp-content/uploads/2018/10/lasagna-original..jpg"),
     Dish(7,"Risotto de Champiñones","Arroz cremoso cocinado con champiñones, vino blanco y queso parmesano.","https//example.com/risotto.jpg")
 )
 
@@ -87,8 +88,8 @@ val restaurants = listOf(
 
 val mexicanRestaurants = listOf(
     Restaurant(2, "Taquito Brothers", "Comida mexicana", "https://www.recetasnestlecam.com/sites/default/files/2023-08/platos-ingredientes-comida-mexicana_0.jpg", taquitosCategories, mexicanFood),
-    Restaurant(3, "Laca Lacatrina", "Comida mexicana", "https//example.com/ramen-tonkotsu.jpg", taquitosCategories, mexicanFood),
-    Restaurant(4, "Tapatías", "Comida mexicana", "https//example.com/ramen-tonkotsu.jpg", taquitosCategories, mexicanFood),
+    Restaurant(3, "Laca Lacatrina", "Comida mexicana", "https://www.visitstaugustine.com/sites/default/files/styles/meta_4x3/public/2023-10/la-catrina-food-25x15-WEB.jpg?itok=YJ2X0kbd", taquitosCategories, mexicanFood),
+    Restaurant(4, "Tapatías", "Comida mexicana", "https://gran.luchito.com/wp-content/uploads/2021/07/BBQ-Corn-Hero-660x500.jpg", taquitosCategories, mexicanFood),
 )
 
 val italianRestaurants = listOf(
@@ -96,7 +97,11 @@ val italianRestaurants = listOf(
 )
 
 val bakeryRestaurants = listOf(
-    Restaurant(6, "Dulce Diabetes", "Explosión dulce en tu corazón", "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/1/29/1/FN_Strawberry-Poke-Cake_s4x3.jpg.rend.hgtvcom.616.462.85.suffix/1393874276855.webp", taquitosCategories, desserts)
+    Restaurant(6, "Dulce Diabetes", "Explosión dulce en tu corazón", "https://hips.hearstapps.com/hmg-prod/images/fruit-tart-index-65ef54d972bb1.jpg?crop=0.505xw:1.00xh;0.495xw,0&resize=640:*", taquitosCategories, desserts)
+)
+
+val healthyRestaurants = listOf(
+    Restaurant(6, "Veggie palace", "Comida insipida", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2w5OJiz3w7y1d79GHbh0PfS0CkMl-kpfgAg&s", taquitosCategories, healthyFood)
 )
 
 val categories = listOf(
@@ -104,7 +109,7 @@ val categories = listOf(
     Category(2, "Comida rápida", restaurants),
     Category(3, "Comida italiana", italianRestaurants),
     Category(4, "Postres", bakeryRestaurants),
-//    Category(5, "Comida saludable")
+    Category(5, "Comida saludable", healthyRestaurants)
 )
 
 val categoriesRestaurantMap = mapOf(
