@@ -123,8 +123,5 @@ fun RestaurantCard(restaurant: Restaurant, category: Int, onRestaurantClick: (In
         Text(
             text = restaurant.name,
         )
-        Text(
-            text = category.toString(),
-        )
     }
 }
