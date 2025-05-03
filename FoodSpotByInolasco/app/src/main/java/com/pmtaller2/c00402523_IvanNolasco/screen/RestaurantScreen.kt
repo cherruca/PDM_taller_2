@@ -22,9 +22,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -48,6 +54,8 @@ fun DishListScreen(
     restaurant: Restaurant
 ) {
 
+    var search by remember { mutableStateOf("") }
+    val filtered = restaurant.menu.filter { it.name.contains(search, ignoreCase = true) }
 
     Scaffold(
         topBar = {
@@ -89,7 +97,16 @@ fun DishListScreen(
                 text = restaurant.description,
                 textAlign = TextAlign.Center,
                 fontStyle = FontStyle.Italic,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                modifier = Modifier
+                    .padding(16.dp)
+            )
+
+            TextField(
+                value = search,
+                onValueChange = { search = it },
+                label = { Text("Buscar en el menú") },
+                modifier = Modifier.fillMaxWidth()
             )
 
             LazyColumn(
@@ -97,7 +114,7 @@ fun DishListScreen(
                     .fillMaxHeight()
                     .padding(16.dp)
             ) {
-                items(restaurant.menu) { menuItem ->
+                items(filtered) { menuItem ->
                     DishCard(dish = menuItem) {
 
                     }
