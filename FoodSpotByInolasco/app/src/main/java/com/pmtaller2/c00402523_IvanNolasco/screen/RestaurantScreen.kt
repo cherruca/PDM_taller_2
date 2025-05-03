@@ -74,6 +74,11 @@ fun DishListScreen(
                     }
                 }
             )
+        },
+        bottomBar = {
+            if (navController != null) {
+                mainBottomBar(navController)
+            }
         }
     ) { paddingValues ->
         Column(

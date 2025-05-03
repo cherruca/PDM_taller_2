@@ -91,11 +91,19 @@ val mexicanRestaurants = listOf(
     Restaurant(4, "Tapatías", "Comida mexicana", "https//example.com/ramen-tonkotsu.jpg", taquitosCategories, mexicanFood),
 )
 
+val italianRestaurants = listOf(
+    Restaurant(5, "El Padrini", "Un platillo al que no te puedes rehusar", "https://www.travelsphere.co.uk/media/5mpbkpmc/istock_italy_food_spaghetti_800x500.png?rmode=max&width=500&format=webp", taquitosCategories, italianFood)
+)
+
+val bakeryRestaurants = listOf(
+    Restaurant(6, "Dulce Diabetes", "Explosión dulce en tu corazón", "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/1/29/1/FN_Strawberry-Poke-Cake_s4x3.jpg.rend.hgtvcom.616.462.85.suffix/1393874276855.webp", taquitosCategories, desserts)
+)
+
 val categories = listOf(
     Category(1, "Comida méxicana", mexicanRestaurants),
     Category(2, "Comida rápida", restaurants),
-//    Category(3, "Comida italiana"),
-//    Category(4, "Postres"),
+    Category(3, "Comida italiana", italianRestaurants),
+    Category(4, "Postres", bakeryRestaurants),
 //    Category(5, "Comida saludable")
 )
 

@@ -1,6 +1,5 @@
 package com.pmtaller2.c00402523_IvanNolasco.navigation
 
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -10,13 +9,12 @@ import androidx.navigation.navArgument
 import com.pmtaller2.c00402523_IvanNolasco.data.Category
 import com.pmtaller2.c00402523_IvanNolasco.data.Restaurant
 import com.pmtaller2.c00402523_IvanNolasco.data.categories
-//import com.pmtaller2.c00402523_IvanNolasco.screen.RestaurantsScreen
-import com.pmtaller2.c00402523_IvanNolasco.data.restaurants
+import com.pmtaller2.c00402523_IvanNolasco.screen.CartScreen
 import com.pmtaller2.c00402523_IvanNolasco.screen.CategoriesScreen
 import com.pmtaller2.c00402523_IvanNolasco.screen.DishListScreen
+import com.pmtaller2.c00402523_IvanNolasco.screen.SearchScreen
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import java.util.logging.Logger
 
 sealed class Screen(val route: String) {
     object CategoriesScreen: Screen("categories")
@@ -29,6 +27,10 @@ sealed class Screen(val route: String) {
 //    object RestaurantScreen: Screen("restaurant") {
 //        fun createRoute(restaurantId: Restaurant) = "restaurant/$restaurantId"
 //    }
+
+    object SearchScreen: Screen("search")
+
+    object CartScreen: Screen("cart")
 
 }
 
@@ -59,9 +61,14 @@ fun AppNavigation() {
                     DishListScreen(navController = navController, selectedRestaurant)
                 }
             }
+        }
 
+        composable(Screen.SearchScreen.route) {
+            SearchScreen(navController = navController)
+        }
 
-
+        composable(Screen.CartScreen.route) {
+            CartScreen(navController = navController)
         }
 
 //        composable(Screen.RestaurantScreen.route) {
