@@ -115,9 +115,7 @@ fun DishListScreen(
                     .padding(16.dp)
             ) {
                 items(filtered) { menuItem ->
-                    DishCard(dish = menuItem) {
-
-                    }
+                    DishCard(dish = menuItem)
                 }
             }
 
@@ -126,7 +124,7 @@ fun DishListScreen(
 }
 
     @Composable
-    fun DishCard(dish: Dish, onDishClick: (Int) -> Unit) {
+    fun DishCard(dish: Dish) {
         val context = LocalContext.current
         Card(
             modifier = Modifier
@@ -137,8 +135,7 @@ fun DishListScreen(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(10.dp)
-                    .clickable { onDishClick(dish.id) },
+                    .padding(10.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 AsyncImage(
@@ -146,6 +143,11 @@ fun DishListScreen(
                     contentDescription = dish.name,
                     modifier = Modifier.size(300.dp),
                     error = painterResource(id = R.drawable.ic_launcher_foreground)
+                )
+
+                Spacer(
+                    modifier = Modifier
+                        .size(10.dp)
                 )
 
                 Text(
@@ -175,4 +177,9 @@ fun DishListScreen(
             }
 
         }
+
+        Spacer(
+            modifier = Modifier
+                .size(16.dp)
+        )
     }
