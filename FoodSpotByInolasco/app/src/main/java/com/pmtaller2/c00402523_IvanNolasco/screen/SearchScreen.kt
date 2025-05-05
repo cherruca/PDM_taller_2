@@ -105,12 +105,13 @@ fun SearchScreen(navController: NavController) {
 //                        it.name.contains(search, ignoreCase = true)
 //                    }.ifEmpty { null }?.let { item.copy(restaurants = it) }
 //                }
+
                 categories.forEach { thisCategory ->
                     val restaurants = thisCategory.restaurants
                     restaurants.forEach { thisRestaurant ->
                         val foundMenu = thisRestaurant.menu.filter { it.name.contains(search, ignoreCase = true)  }
-                        if (foundMenu.isNotEmpty()) {
-
+                        val foundCategory = thisRestaurant.categories.filter { it.contains(search, ignoreCase = true) }
+                        if (foundMenu.isNotEmpty() || foundCategory.isNotEmpty()) {
                             filteredResults.add(thisRestaurant)
                         }
                     }
