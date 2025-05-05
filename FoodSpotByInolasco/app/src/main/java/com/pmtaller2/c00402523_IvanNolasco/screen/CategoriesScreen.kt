@@ -87,9 +87,8 @@ fun CategoriesScreen(navController: NavController, categories: List<Category>) {
                             .padding(16.dp)
                     ) { items(category.restaurants) { restaurant ->
                             RestaurantCard(restaurant = restaurant, category.id) { restaurantId ->
-//                                val thisRestaurant = Json.encodeToString(restaurantId)
                                 navController.navigate(Screen.RestaurantScreen.createRoute(category.id, restaurant.id))
-
+//                                val thisRestaurant = Json.encodeToString(restaurantId)
                             }
                         }
 
